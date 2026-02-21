@@ -1,6 +1,6 @@
 # 8-bit CPU Assembler
 
-Assembler simples (C + Flex + Bison) para a sua CPU handmade. Cada instrução gera 2 bytes:
+Assembler simples (C + Flex + Bison) para a CPU handmade. Cada instrução gera 2 bytes:
 
 - Byte 0: opcode
 - Byte 1: dados
