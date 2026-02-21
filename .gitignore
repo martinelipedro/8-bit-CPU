@@ -1,0 +1,15 @@
+# Build outputs
+/a.out
+/microcode/microcode
+/microcode/eeprom*.bin
+/microcode/alu_eeprom.bin
+
+# Compiler build artifacts
+/compiler/*.o
+/compiler/assembler
+/compiler/lex.yy.c
+/compiler/assembler.tab.c
+/compiler/assembler.tab.h
+
+# OS
+.DS_Store

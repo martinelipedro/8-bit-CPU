@@ -1,0 +1,111 @@
+,,,,,,,,,,,,,
+,Number,Operation,Operand 1,Operand 2,C9,C10,C11,C12,C13,C14,C15,C16,Description
+,0,NOP,X,X,|,|,|,|,|,|,|,|,No operation
+,1,MOV,A,B,A,A,A,A,B,B,B,B,Move data from regs A to B (Read Reg ID)
+,2,LDA,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Load reg A with data frrom memory at address ADDR
+,3,LDB,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Load reg B with data frrom memory at address ADDR
+,4,STA,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Store reg A contents to memory at address ADDR
+,5,STB,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Store reg B contents to memory at address ADDR
+,6,LDI,VALUE,X,VALUE,VALUE,VALUE,VALUE,VALUE,VALUE,VALUE,VALUE,Load Immediate Value VALUE at register A
+,7,AND,OPR,RES,OPR,OPR,OPR,OPR,RES,RES,RES,RES,Bitwise AND between registers OPR and A. Result goes in RES
+,8,OR,REG,X,OPR,OPR,OPR,OPR,RES,RES,RES,RES,Bitwise OR between registers OPR and A. Result goes in RES
+,9,XOR,REG,X,OPR,OPR,OPR,OPR,RES,RES,RES,RES,Bitwise XOR between registers OPR and A. Result goes in RES
+,10,NOT,REG,X,OPR,OPR,OPR,OPR,RES,RES,RES,RES,Bitwise NOT in register OPR. Result goes in RES
+,11,INC,REG,X,OPR,OPR,OPR,OPR,RES,RES,RES,RES,Increments 1 at register OPR and puts result in RES
+,12,DEC,REG,X,OPR,OPR,OPR,OPR,RES,RES,RES,RES,Decrements 1 at register OPR and puts result in RES
+,13,ADD,REG,X,OPR,OPR,OPR,OPR,RES,RES,RES,RES,Adds OPR and A register. Output goes in RES
+,14,SUB,REG,X,OPR,OPR,OPR,OPR,RES,RES,RES,RES,Subs OPR and A register. Output goes in RES
+,15,SHL,REG,X,REG,REG,REG,REG,REG,REG,REG,REG,Shifts REG data by 1 to the left
+,16,CMP,X,X,OPR,OPR,OPR,OPR,|,|,|,|,Compares OPR and A. Set comparision flags
+,17,JE,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Jumps to ADDR if equal
+,18,JNE,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Jumps to ADDR if not equal
+,19,JG,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Jumps to ADDR if greater than
+,20,JL,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Jumps to ADDR if A is less than B
+,21,JGE,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Jumps to ADDR if greater or equals 
+,22,JLE,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Jumps to ADDR if less or equals
+,23,HLT,X,X,|,|,|,|,|,|,|,|,Halts the CPU
+,24,PUSHI,VALUE,X,VALUE,VALUE,VALUE,VALUE,VALUE,VALUE,VALUE,VALUE,Push an immediate value to the stack
+,25,PUSH,REG,X,REG,REG,REG,REG,|,|,|,|,Push the contents of register REG to the stack
+,26,POP,REG,X,|,|,|,|,REG,REG,REG,REG,Retrieve the top of the stack to the register REG
+,27,SETZ,REG,X,|,|,|,|,REG,REG,REG,REG,Set register REG if ZERO flag is up
+,28,SETC,REG,X,|,|,|,|,REG,REG,REG,REG,Set register REG if CARRY flag is up
+,29,CLF,X,X,|,|,|,|,|,|,|,|,Clear ALU flags
+,30,JMP,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Unconditional JUMP to address ADDR
+,31,LCD,X,X,|,|,|,|,|,|,|,|,Loads the LCD register value into the LCD
+,32,RESET,X,X,|,|,|,|,|,|,|,|,"Resets the CPU state, except for the RAM"
+,33,SET,REG,X,|,|,|,|,REG,REG,REG,REG,Write all ones in register REG
+,34,CLR,REG,X,|,|,|,|,REG,REG,REG,REG,Write all zeroes in register REG
+,35,INX,X,X,|,|,|,|,|,|,|,|,Increments counter (C) register
+,36,DEX,X,X,|,|,|,|,|,|,|,|,Decrements counter (C) register
+,37, SPU,X,X,|,|,|,|,|,|,|,|,Increment stack pointer by 1
+,38,SPD,X,X,|,|,|,|,|,|,|,|,Decrement stack pointer by 1
+,39,CALL,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Call subroutine
+,40,RET,X,X,|,|,|,|,|,|,|,|,Return from subroutine
+,41,CE,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Call if equal
+,42,CNE,ADDR,X,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,ADDR,Call if not equal
+,44,,,,,,,,,,,,
+,45,,,,,,,,,,,,
+,46,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,65,,,,,,,,,,
+,,,66,,,,,,,,,,
+,,,67,,,,,,,,,,
+,,,68,,,,,,,,,,
+,,,69,,,,,,,,,,
+,,,70,,,,,,,,,,
+,,,71,,,,,,,,,,
+,,,72,,,,,,,,,,
+,,,73,,,,,,,,,,
+,,,74,,,,,,,,,,
+,,,75,,,,,,,,,,
+,,,76,,,,,,,,,,
+,,,77,,,,,,,,,,
+,,,78,,,,,,,,,,
+,,,79,,,,,,,,,,
+,,,80,,,,,,,,,,
+,,,81,,,,,,,,,,
+,,,82,,,,,,,,,,
+,,,83,,,,,,,,,,
+,,,84,,,,,,,,,,
+,,,85,,,,,,,,,,
+,,,86,,,,,,,,,,
+,,,87,,,,,,,,,,
+,,,88,,,,,,,,,,
+,,,89,,,,,,,,,,
+,,,90,,,,,,,,,,
+,,,91,,,,,,,,,,
+,,,92,,,,,,,,,,
+,,,93,,,,,,,,,,
+,,,94,,,,,,,,,,
+,,,95,,,,,,,,,,
+,,,96,,,,,,,,,,
+,,,97,,,,,,,,,,
+,,,98,,,,,,,,,,
+,,,99,,,,,,,,,,
+,,,100,,,,,,,,,,
+,,,101,,,,,,,,,,
+,,,102,,,,,,,,,,
