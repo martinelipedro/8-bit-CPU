@@ -1,5 +1,9 @@
 # 8-bit CPU
 
+![CPU](media/img.jpeg)
+
+<video src="media/Execu%C3%A7%C3%A3o.mp4" controls muted></video>
+
 Projeto de uma CPU 8-bit desenvolvida em protoboards (Hardware & Software). Este repositório reúne:
 - esquemáticos de hardware;
 - documentação e mídia do hardware
@@ -34,4 +38,3 @@ Projeto de uma CPU 8-bit desenvolvida em protoboards (Hardware & Software). Este
 - A tabela de instruções está em `docs/instructions.md`
 - A tabela do microcódigo está em `docs/microcode.md`
 - O microcódigo está em evolução; nem todos os opcodes já estão implementados no hardware.
-

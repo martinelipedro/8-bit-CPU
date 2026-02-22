@@ -4,7 +4,7 @@ Tabela de registradores e seus códigos (4 bits):
 
 | Registrador | Código | Observação |
 |---|---:|---|
-| A | 0 | Acumulador |
+| A | 0 | Multipurpose |
 | B | 1 | Multipurpose |
 | C | 2 | Contador up/down (loops) |
 | PAGE | 3 | Paginação de endereços |

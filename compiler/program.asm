@@ -1,0 +1,15 @@
+LDI 25
+MOV B, A
+MOV 7SEG, B
+
+LDI 3
+ADD B, B
+MOV 7SEG, B
+
+MOV A, B
+NOT A
+
+MOV 7SEG, A
+
+HLT
+

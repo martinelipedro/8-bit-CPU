@@ -198,8 +198,8 @@ int main()
     img.opcode(0x7)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"), 0x0),
-        MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"), 0x0),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
@@ -208,8 +208,8 @@ int main()
     img.opcode(0x8)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"), 0x1),
-        MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"), 0x1),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
@@ -218,8 +218,8 @@ int main()
     img.opcode(0x9)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"), 0x2),
-        MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"), 0x2),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
@@ -228,8 +228,8 @@ int main()
     img.opcode(0xA)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"), 0x3),
-        MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"), 0x3),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
@@ -238,8 +238,8 @@ int main()
     img.opcode(0xB)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"), 0x4),
-        MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"), 0x4),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
@@ -248,8 +248,8 @@ int main()
     img.opcode(0xC)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"), 0x5),
-        MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"), 0x5),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
@@ -258,8 +258,8 @@ int main()
     img.opcode(0xD)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"), 0x6),
-        MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"), 0x6),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
@@ -268,8 +268,8 @@ int main()
     img.opcode(0xE)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"), 0x7),
-        MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.select(sm, "ALU_OUT").select(sm, "EN_IN"), 0x7),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
@@ -288,7 +288,8 @@ int main()
     img.opcode(0x10)
       .from_step(5)
       .seq({
-        with_alu_code(MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN").set(sm, "ALU_FLAG_IN"), 0x7),
+        MicroAction{}.select(sm, "EN_OUT").select(sm, "ALU_IN"),
+        with_alu_code(MicroAction{}.set(sm, "ALU_FLAG_IN"), 0x7),
         MicroAction{}.select(sm, "COUNTER_EN"),
         MicroAction{}.set(sm, "STEP_RESET")
       });
